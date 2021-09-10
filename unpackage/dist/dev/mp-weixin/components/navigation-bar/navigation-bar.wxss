@@ -1,0 +1,26 @@
+
+.music-head.data-v-401b6804{
+	height: 75px;
+	font-size: 16px;
+	line-height: 80px;
+	text-align: center;
+}
+.music-head-icon.data-v-401b6804{
+	position: absolute;
+	left: 8px;
+	top: 25px;
+	width: 90px;
+	height: 30px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	line-height: 31px;
+	-webkit-border-radius: 15px;
+	        border-radius: 15px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: space-evenly;
+	-webkit-justify-content: space-evenly;
+	        justify-content: space-evenly;
+}
+
