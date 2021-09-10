@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*每个页面公共css */
 @font-face {
   font-family: "iconfont"; /* Project id 2802560 */
   src: url('//at.alicdn.com/t/font_2802560_5gln7qbi37g.woff2?t=1631260199597') format('woff2'),
@@ -26,6 +42,12 @@
 .icon-play:before {
   content: "\ea8d";
 }
-
-/*每个页面公共css */
+.scroll-view-box{
+	width: 100%;
+	height: calc(100vh - 70px);
+	overflow: hidden;
+}
+.scroll-view-box scroll-view{
+	height: 100%;
+}
 

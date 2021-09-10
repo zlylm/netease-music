@@ -1,8 +1,8 @@
 <template>
 	<view class="music-head">
-		<view class="music-head-icon">
-			<text class="iconfont icon-right-copy"></text>|
-			<text class="iconfont icon-lingling"></text>
+		<view v-if="icon" class="music-head-icon">
+			<text class="iconfont icon-right-copy" @tap="toBack()"></text>|
+			<text class="iconfont icon-lingling" @click="toHome()"></text>
 		</view>
 		{{title}}
 	</view>
@@ -10,11 +10,21 @@
 
 <script>
 	export default {
-		props: ['title'],
+		props: ['title', 'icon'],
 		data() {
 			return {
 				
 			};
+		},
+		methods:{
+			toBack(){
+				uni.navigateBack()
+			},
+			toHome(){
+				uni.navigateTo({
+					url: "pages/index/index"
+				})
+			}
 		}
 	}
 </script>

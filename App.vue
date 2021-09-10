@@ -13,6 +13,14 @@
 </script>
 
 <style>
-@import url("~@/common/iconfont.css");
 	/*每个页面公共css */
+@import url("~@/common/iconfont.css");
+.scroll-view-box{
+	width: 100%;
+	height: calc(100vh - 70px);
+	overflow: hidden;
+}
+.scroll-view-box scroll-view{
+	height: 100%;
+}
 </style>
