@@ -1,5 +1,5 @@
 <template>
-	<view class="music-head">
+	<view class="music-head" :style="{color: color}">
 		<view v-if="icon" class="music-head-icon">
 			<text class="iconfont icon-right-copy" @tap="toBack()"></text>|
 			<text class="iconfont icon-lingling" @click="toHome()"></text>
@@ -10,7 +10,7 @@
 
 <script>
 	export default {
-		props: ['title', 'icon'],
+		props: ['title', 'icon','color'],
 		data() {
 			return {
 				
@@ -22,7 +22,7 @@
 			},
 			toHome(){
 				uni.navigateTo({
-					url: "pages/index/index"
+					url: "/pages/index/index"
 				})
 			}
 		}
@@ -35,7 +35,9 @@
 	font-size: 16px;
 	line-height: 80px;
 	text-align: center;
-	
+	z-index: 2;
+	position: relative;
+	/* color: #fff; */
 }
 .music-head-icon{
 	position: absolute;

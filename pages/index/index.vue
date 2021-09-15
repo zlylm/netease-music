@@ -8,17 +8,21 @@
 					<input placeholder="请输入名称" />
 				</view>
 				<view class="index-list">
-					<view class="index-list-item">
+					<view 
+						class="index-list-item" 
+						v-for="(item, index) in topList" 
+						:key="item.coverImgUrl"
+						@tap="toList(item.id)"
+					>
 						<view class="index-list-img">
-							<image src="../../static/logo.png" mode=""></image>
-							<text>亮灯数</text>
+							<image :src="item.coverImgUrl" mode=""></image>
+							<text>{{item.updateFrequency}}</text>
 						</view>
 						<view class="index-list-text">
-							<view>设备001</view>
-							<view>设备001</view>
-							<view>设备001</view>
+							<view v-for="(list, idx) in item.tracks" :key="list.first">{{list.first}} - {{list.second}}</view>
 						</view>
 					</view>
+					
 				</view>
 			</scroll-view>
 		</view>
@@ -27,20 +31,30 @@
 
 <script>
 	import NavBar from '../../components/navigation-bar/navigation-bar.vue'
+	import { topList } from '../../common/api.js'
 	export default {
 		components: {
 			NavBar
 		},
 		data() {
 			return {
-				title: 'Hello'
+				topList: []
 			}
 		},
 		onLoad() {
-
+			topList().then(res => {
+				let result = res.data.list
+				result.length = 4
+				this.topList = result
+				console.log(result)
+			})
 		},
 		methods: {
-
+			toList(listId){
+				uni.navigateTo({
+					url: '/pages/list/list?listId=' + listId
+				})
+			}
 		}
 	}
 </script>
@@ -89,10 +103,18 @@
 		bottom: 12rpx;
 		color: #fff;
 		font-size: 20rpx;
+		
 	}
 	.index-list-text{
+		flex: 1;
 		font-size: 24rpx;
-		line-height: 66rpx;
+		line-height: 70rpx;
+	}
+	.index-list-text view{
+		width: 460rpx;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
 	}
 	
 </style>

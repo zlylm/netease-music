@@ -1,0 +1,72 @@
+.detail-play{
+	width: 580rpx;
+	height: 580rpx;
+	background: url(~@/static/quan.png) no-repeat;
+	background-size: cover;
+	margin: 214rpx auto 0;
+	position: relative;
+}
+.detail-play image{
+	width: 370rpx;
+	height: 370rpx;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.detail-play text{
+	width: 100rpx;
+	height: 100rpx;
+	font-size: 100rpx;
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.detail-play view{
+	width: 230rpx;
+	height: 360rpx;
+	background: url(~@/static/gunzi.png) no-repeat;
+	position: absolute;
+	left: 80rpx;
+	top: -240rpx;
+	right: 0;
+	/* bottom: 0; */
+	margin: auto;
+	background-size: cover;
+}
+
+.detail-lyric{font-size: 32rpx;line-height: 82rpx;height: 246rpx;text-align: center;overflow: hidden;color: #6f6e73;}
+.detail-lyric-warp{}
+.detail-lyric-item{height: 82rpx;}
+.detail-lyric-item.active{color: #fff;}
+
+.detail-like{margin: 0 30rpx;}
+.detail-like-head{font-size: 36rpx;color: #fff;margin: 50rpx 0;}
+.detail-like-item{display: flex;align-items: center;margin-bottom: 28rpx;}
+.detail-like-img{width: 82rpx;height: 82rpx;border-radius: 20rpx;overflow: hidden;margin-right: 20rpx;}
+.detail-like-img image{width: 100%;height: 100%;}
+.detail-like-song{flex: 1;}
+.detail-like-song view:nth-child(1){font-size: 28rpx;color: #fff;margin-bottom: 12rpx;}
+.detail-like-song view:nth-child(2) text{font-size: 24rpx;position: relative;top: -10rpx;margin-left: 10rpx;color: #c6c2bf;}
+.detail-like-song image{width: 26rpx;height: 20rpx;margin-bottom: 10rpx;}
+.detail-like-item text{font-size: 50rpx;}
+
+.detail-comment{margin: 0 30rpx;}
+.detail-comment-head{font-size: 36rpx;color: #fff;margin: 50rpx 0;}
+.detail-comment-item{margin-bottom: 28rpx;display: flex;}
+.detail-comment-img{width: 64rpx;height: 64rpx;border-radius: 50%;overflow: hidden;margin-right: 18rpx;}
+.detail-comment-img image{width: 100%;height: 100%;}
+.detail-comment-content{flex: 1;}
+.detail-comment-title{display: flex;justify-content: space-between;margin-bottom: 20rpx;}
+.detail-comment-name{color: #cbcacf;}
+.detail-comment-name view:nth-child(1){font-size: 26rpx;}
+.detail-comment-name view:nth-child(2){font-size: 20rpx;}
+.detail-comment-like{font-size: 28rpx;}
+.detail-comment-text{color: #fff;line-height: 40rpx;font-size: 28rpx;border-bottom: solid 1rpx #e0e0e0;padding-bottom: 10rpx;}

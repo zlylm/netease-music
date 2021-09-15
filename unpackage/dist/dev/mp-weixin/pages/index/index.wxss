@@ -34,8 +34,7 @@
   height: 70rpx;
   margin: 50rpx 30rpx;
   background-color: #f7f7f7;
-  -webkit-border-radius: 50rpx;
-          border-radius: 50rpx;
+  border-radius: 50rpx;
   font-size: 26rpx;
   padding: 0 30rpx;
 }
@@ -62,8 +61,7 @@
   width: 212rpx;
   height: 212rpx;
   position: relative;
-  -webkit-border-radius: 20rpx;
-          border-radius: 20rpx;
+  border-radius: 20rpx;
   overflow: hidden;
   margin-right: 20rpx;
 }
@@ -79,7 +77,16 @@
   font-size: 20rpx;
 }
 .index-list-text.data-v-57280228 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
   font-size: 24rpx;
-  line-height: 66rpx;
+  line-height: 70rpx;
+}
+.index-list-text view.data-v-57280228 {
+  width: 460rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
